@@ -121,4 +121,4 @@ for mutation in mutations:
     s = mutate(s, f, mutation)
 
 # Generate FASTA file
-SeqIO.write(s, '%s.fasta'%out, 'fasta')
+SeqIO.write(s, out, 'fasta')

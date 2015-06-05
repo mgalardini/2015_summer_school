@@ -2,6 +2,8 @@
 # The genome file should be put in the same directory as the makefile
 GENOME = reference.gbk
 RFASTA = reference.fasta
+# Start of the genome fragment
+START = 48972142
 # Scripts directory
 SRCDIR = $(CURDIR)/src
 # Gene to be mutated
@@ -18,9 +20,7 @@ ARTDIR = $(SOFTDIR)art_bin_ChocolateCherryCake
 
 MUTFASTA = mutated.fasta
 $(MUTFASTA): $(GENOME)
-	$(SRCDIR)/mutate_gbk $(GENOME) $(GENE) mut $(MUTATIONS) && \
-	$(SRCDIR)/mutate_fasta mut.fasta $(RMUT) $(MUTFASTA) && \
-	rm mut.fasta
+	$(SRCDIR)/mutate_gbk $(GENOME) $(GENE) $(MUTFASTA) $(MUTATIONS)
 
 READ1 = $(SAMPLE)1.fq
 READ2 = $(SAMPLE)2.fq
@@ -39,7 +39,9 @@ $(VCF): $(TREAD1) $(RFASTA)
 		samtools view -bS aln.sam -q 20 -f 2 -F 256 -o aln.bam && \
 		samtools sort aln.bam aln.sorted && \
 		samtools index aln.sorted.bam && \
-		freebayes -f $(RFASTA) --ploidy 1 --genotype-qualities --standard-filters aln.sorted.bam > $(VCF)
+		freebayes -f $(RFASTA) --ploidy 1 --genotype-qualities --standard-filters aln.sorted.bam > $(VCF).tmp && \
+		$(SRCDIR)/correct_vcf $(VCF).tmp $(START) $(VCF) && \
+		rm $(VCF).tmp		
 
 all: $(VCF)
 
