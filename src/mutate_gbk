@@ -1,0 +1,124 @@
+#!/usr/bin/env python
+
+# Copyright (C) <2015> EMBL-European Bioinformatics Institute
+
+# This program is free software: you can redistribute it and/or
+# modify it under the terms of the GNU General Public License as
+# published by the Free Software Foundation, either version 3 of
+# the License, or (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+
+# Neither the institution name nor the name 2015_summer_school
+# can be used to endorse or promote products derived from
+# this software without prior written permission.
+# For written permission, please contact <marco@ebi.ac.uk>.
+
+# Products derived from this software may not be called 2015_summer_school
+# nor may 2015_summer_school appear in their names without prior written
+# permission of the developers. You should have received a copy
+# of the GNU General Public License along with this program.
+# If not, see <http://www.gnu.org/licenses/>.
+
+from Bio import SeqIO
+from Bio.Data import CodonTable
+
+import sys
+
+if len(sys.argv) < 5:
+    sys.stderr.write('USAGE: mutate_gbk GBK GENE FASTA MUTATION [MUTATION, [MUTATION], ...]\n')
+    sys.exit(65)
+
+gbk, gene, out = sys.argv[1:4]
+mutations = sys.argv[4:]
+
+s = SeqIO.read(gbk, 'genbank')
+
+b = False
+for f in s.features:
+    if f.type == 'CDS':
+        if f.qualifiers['gene'][0] == gene:
+            b = True
+            break
+
+if not b:
+    sys.stderr.write('Gene %s not found!\n'%gene)
+    sys.exit(2)
+
+def mutate(s, f, mutation):
+    # Verify that the mutation is there
+    ref = mutation[0]
+    pos = int(mutation[1:-1])
+    mut = mutation[-1]
+
+    wt = f.qualifiers['translation'][0]
+    if wt[pos-1] != ref:
+        sys.stderr.write('Looking for Aa %s in %d, found %s\n'%(ref, pos, wt[pos-1]))
+        sys.exit(2)
+
+    t = CodonTable.standard_dna_table
+
+    # Get the exon nucleotide sequence
+    dna = f.location.extract(s)
+
+    # Can we get the desired mutation with one single SNP?
+    codon = str(dna[pos*3-3:pos*3].seq)
+
+    d = set( ('A', 'T', 'G', 'C') )
+
+    if t.forward_table[codon] != ref:
+        sys.stderr.write('Wrong codon found in pos. %d (%s)\n'%(pos, codon))
+        sys.exit(2)
+
+    sys.stderr.write('Starting codon: %s (pos. %d -> Aa %s)\n'%(codon, pos, t.forward_table[codon]))
+
+    b = False
+    for c, i in zip(codon, range(len(codon))):
+        for m in d - set(c):
+            new_codon = codon[:i] + m + codon[i+1:]
+            if new_codon not in t.forward_table:
+                continue
+            if t.forward_table[new_codon] == mut:
+                sys.stderr.write('New codon: %s\n'%new_codon)
+                b = True
+                break
+        if b:
+            break
+
+    if not b:
+        sys.stderr.write('Cannot get the desired mutation!\n')
+        sys.exit(2)
+
+    # Mutate the original sequence
+    # Can be tricky, we have to map the original codon to the gene
+    # Let's assume we will never get a "split" codon
+    a = 0
+    b = False
+    for piece in f.location.parts:
+        if pos*3-3 < a + (piece.end - piece.start) and pos*3 < a + (piece.end - piece.start):
+            b = True
+            break
+        a += (piece.end - piece.start)
+
+    if not b:
+        sys.stderr.write('Split codon! (though luck!)\n')
+        sys.exit()
+
+    # Generate the new sequence
+    s1 = s[:piece.start + pos*3-3-a] + new_codon + s[piece.start + pos*3-a:]
+    # Check that the protein has the right mutation now
+    if str(f.extract(s1).seq.translate())[pos-1] != mut:
+        sys.stderr.write('Expected mutation %s, found %s\n'%(mut,
+            str(f.extract(s1).seq.translate())[pos-1]))
+        sys.exit(2)
+
+    return s1
+
+for mutation in mutations:
+    s = mutate(s, f, mutation)
+
+# Generate FASTA file
+SeqIO.write(s, '%s.fasta'%out, 'fasta')

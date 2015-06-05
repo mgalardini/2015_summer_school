@@ -1,0 +1,295 @@
+LOCUS       12 3224 bp DNA HTG 4-JUN-2015
+DEFINITION  Homo sapiens chromosome 12 GRCh38 partial sequence 48978453..48981676 reannotated
+            via EnsEMBL
+ACCESSION   chromosome:GRCh38:12:48978453:48981676:1
+VERSION     chromosome:GRCh38:12:48978453:48981676:1
+KEYWORDS    .
+SOURCE      human
+  ORGANISM  Homo sapiens
+            Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria;
+            Deuterostomia; Chordata; Craniata; Vertebrata; Gnathostomata;
+            Teleostomi; Euteleostomi; Sarcopterygii; Dipnotetrapodomorpha;
+            Tetrapoda; Amniota; Mammalia; Theria; Eutheria; Boreoeutheria;
+            Euarchontoglires; Primates; Haplorrhini; Simiiformes; Catarrhini;
+            Hominoidea; Hominidae.
+COMMENT     This sequence was annotated by the Ensembl system. Please visit the Ensembl web
+            site, http://www.ensembl.org/ for more information.
+COMMENT     All feature locations are relative to the first (5') base of the sequence in this
+            file.  The sequence presented is always the forward strand of the assembly.
+            Features that lie outside of the sequence contained in this file have clonal
+            location coordinates in the format: .:..
+COMMENT     The /gene indicates a unique id for a gene, /note="transcript_id=..." a unique id
+            for a transcript, /protein_id a unique id for a peptide and note="exon_id=..." a
+            unique id for an exon. These ids are maintained wherever possible between
+            versions.
+COMMENT     All the exons and transcripts in Ensembl are confirmed by similarity to either
+            protein or cDNA sequences.
+FEATURES             Location/Qualifiers
+     source          1..3224
+                     /organism="Homo sapiens"
+                     /db_xref="taxon:9606"
+     gene            1..3224
+                     /gene=ENSG00000125084
+                     /locus_tag="WNT1"
+                     /note="wingless-type MMTV integration site family, member
+                     1 [Source:HGNC Symbol;Acc:HGNC:12774]"
+     mRNA            join(163..302,1016..1269,1972..2237,2700..3224)
+                     /gene="ENSG00000125084"
+                     /note="transcript_id=ENST00000293549"
+     CDS             join(199..302,1016..1269,1972..2237,2700..3188)
+                     /gene="ENSG00000125084"
+                     /protein_id="ENSP00000293549"
+                     /note="transcript_id=ENST00000293549"
+                     /db_xref="CCDS:CCDS8776.1"
+                     /db_xref="Uniprot/SWISSPROT:P04628"
+                     /db_xref="RefSeq_peptide:NP_005421.1"
+                     /db_xref="RefSeq_mRNA:NM_005430.3"
+                     /db_xref="Vega_transcript:OTTHUMT00000408937"
+                     /db_xref="Vega_transcript:WNT1-001"
+                     /db_xref="UCSC:uc001rsu.3"
+                     /db_xref="EMBL:BC074798"
+                     /db_xref="EMBL:BC074799"
+                     /db_xref="EMBL:BT019429"
+                     /db_xref="EMBL:CH471111"
+                     /db_xref="EMBL:X03072"
+                     /db_xref="GO:GO:0000578"
+                     /db_xref="GO:GO:0000578"
+                     /db_xref="GO:GO:0001658"
+                     /db_xref="GO:GO:0001934"
+                     /db_xref="GO:GO:0005102"
+                     /db_xref="GO:GO:0005109"
+                     /db_xref="GO:GO:0005125"
+                     /db_xref="GO:GO:0005125"
+                     /db_xref="GO:GO:0005515"
+                     /db_xref="GO:GO:0005576"
+                     /db_xref="GO:GO:0005578"
+                     /db_xref="GO:GO:0005615"
+                     /db_xref="GO:GO:0005737"
+                     /db_xref="GO:GO:0005788"
+                     /db_xref="GO:GO:0005796"
+                     /db_xref="GO:GO:0005886"
+                     /db_xref="GO:GO:0007267"
+                     /db_xref="GO:GO:0007267"
+                     /db_xref="GO:GO:0007275"
+                     /db_xref="GO:GO:0007520"
+                     /db_xref="GO:GO:0008284"
+                     /db_xref="GO:GO:0009611"
+                     /db_xref="GO:GO:0009986"
+                     /db_xref="GO:GO:0010592"
+                     /db_xref="GO:GO:0010812"
+                     /db_xref="GO:GO:0014902"
+                     /db_xref="GO:GO:0016055"
+                     /db_xref="GO:GO:0019904"
+                     /db_xref="GO:GO:0021527"
+                     /db_xref="GO:GO:0021536"
+                     /db_xref="GO:GO:0021551"
+                     /db_xref="GO:GO:0021551"
+                     /db_xref="GO:GO:0021588"
+                     /db_xref="GO:GO:0021588"
+                     /db_xref="GO:GO:0021797"
+                     /db_xref="GO:GO:0022004"
+                     /db_xref="GO:GO:0022037"
+                     /db_xref="GO:GO:0022408"
+                     /db_xref="GO:GO:0030182"
+                     /db_xref="GO:GO:0030512"
+                     /db_xref="GO:GO:0030514"
+                     /db_xref="GO:GO:0030579"
+                     /db_xref="GO:GO:0030901"
+                     /db_xref="GO:GO:0030901"
+                     /db_xref="GO:GO:0030917"
+                     /db_xref="GO:GO:0031100"
+                     /db_xref="GO:GO:0033077"
+                     /db_xref="GO:GO:0042472"
+                     /db_xref="GO:GO:0042770"
+                     /db_xref="GO:GO:0043568"
+                     /db_xref="GO:GO:0044212"
+                     /db_xref="GO:GO:0044336"
+                     /db_xref="GO:GO:0045165"
+                     /db_xref="GO:GO:0045596"
+                     /db_xref="GO:GO:0045599"
+                     /db_xref="GO:GO:0045599"
+                     /db_xref="GO:GO:0045747"
+                     /db_xref="GO:GO:0045893"
+                     /db_xref="GO:GO:0045944"
+                     /db_xref="GO:GO:0048018"
+                     /db_xref="GO:GO:0048146"
+                     /db_xref="GO:GO:0048663"
+                     /db_xref="GO:GO:0048664"
+                     /db_xref="GO:GO:0051091"
+                     /db_xref="GO:GO:0051091"
+                     /db_xref="GO:GO:0060061"
+                     /db_xref="GO:GO:0060061"
+                     /db_xref="GO:GO:0060070"
+                     /db_xref="GO:GO:0060348"
+                     /db_xref="GO:GO:0061184"
+                     /db_xref="GO:GO:0070365"
+                     /db_xref="GO:GO:0071375"
+                     /db_xref="GO:GO:0071425"
+                     /db_xref="GO:GO:0071542"
+                     /db_xref="GO:GO:0090263"
+                     /db_xref="GO:GO:0090344"
+                     /db_xref="GO:GO:2000059"
+                     /db_xref="HGNC_trans_name:WNT1-001"
+                     /db_xref="Vega_translation:185982"
+                     /db_xref="Vega_translation:OTTHUMP00000243705"
+                     /db_xref="goslim_goa:GO:0003674"
+                     /db_xref="goslim_goa:GO:0003677"
+                     /db_xref="goslim_goa:GO:0005575"
+                     /db_xref="goslim_goa:GO:0005576"
+                     /db_xref="goslim_goa:GO:0005578"
+                     /db_xref="goslim_goa:GO:0005615"
+                     /db_xref="goslim_goa:GO:0005622"
+                     /db_xref="goslim_goa:GO:0005623"
+                     /db_xref="goslim_goa:GO:0005737"
+                     /db_xref="goslim_goa:GO:0005783"
+                     /db_xref="goslim_goa:GO:0005794"
+                     /db_xref="goslim_goa:GO:0005886"
+                     /db_xref="goslim_goa:GO:0006950"
+                     /db_xref="goslim_goa:GO:0007165"
+                     /db_xref="goslim_goa:GO:0007267"
+                     /db_xref="goslim_goa:GO:0008150"
+                     /db_xref="goslim_goa:GO:0009790"
+                     /db_xref="goslim_goa:GO:0030154"
+                     /db_xref="goslim_goa:GO:0043226"
+                     /db_xref="goslim_goa:GO:0048646"
+                     /db_xref="goslim_goa:GO:0048856"
+                     /db_xref="protein_id:AAH74798.1"
+                     /db_xref="protein_id:AAH74799.1"
+                     /db_xref="protein_id:AAV38236.1"
+                     /db_xref="protein_id:CAA26874.1"
+                     /db_xref="protein_id:EAW58030.1"
+                     /db_xref="OTTP:OTTHUMP00000243705"
+                     /db_xref="OTTT:OTTHUMT00000408937"
+                     /db_xref="Reactome:REACT_11045"
+                     /db_xref="Reactome:REACT_111045"
+                     /db_xref="Reactome:REACT_111102"
+                     /db_xref="Reactome:REACT_116125"
+                     /db_xref="Reactome:REACT_14797"
+                     /db_xref="Reactome:REACT_163710"
+                     /db_xref="Reactome:REACT_18372"
+                     /db_xref="Reactome:REACT_21340"
+                     /db_xref="Reactome:REACT_263933"
+                     /db_xref="Reactome:REACT_264034"
+                     /db_xref="Reactome:REACT_264125"
+                     /db_xref="Reactome:REACT_264199"
+                     /db_xref="Reactome:REACT_264224"
+                     /db_xref="Reactome:REACT_264356"
+                     /db_xref="Reactome:REACT_264378"
+                     /db_xref="Reactome:REACT_264594"
+                     /db_xref="Reactome:REACT_264596"
+                     /db_xref="Reactome:REACT_267615"
+                     /db_xref="Reactome:REACT_267874"
+                     /db_xref="Reactome:REACT_27161"
+                     /db_xref="UniParc:UPI0000051043"
+                     /translation="MGLWALLPGWVSATLLLALAALPAALAANSSGRWWGIVNVASST
+                     NLLTDSKSLQLVLEPSLQLLSRKQRRLIRQNPGILHSVSGGLQSAVRECKWQFRNRRW
+                     NCPTAPGPHLFGKIVNRGCRETAFIFAITSAGVTHSVARSCSEGSIESCTCDYRRRGP
+                     GGPDWHWGGCSDNIDFGRLFGREFVDSGEKGRDLRFLMNLHNNEAGRTTVFSEMRQEC
+                     KCHGMSGSCTVRTCWMRLPTLRAVGDVLRDRFDGASRVLYGNRGSNRASRAELLRLEP
+                     EDPAHKPPSPHDLVYFEKSPNFCTYSGRLGTAGTAGRACNSSSPALDGCELLCCGRGH
+                     RTRTQRVTERCNCTFHWCCHVSCRNCTHTRVLHECL"
+     mRNA            join(1..302,1016..1269,1972..2237,2700..2902,2936..3188)
+                     /gene="ENSG00000125084"
+                     /note="transcript_id=ENST00000613114"
+     CDS             join(199..302,1016..1269,1972..2237,2700..2902,2936..3188)
+                     /gene="ENSG00000125084"
+                     /protein_id="ENSP00000481240"
+                     /note="transcript_id=ENST00000613114"
+                     /db_xref="Uniprot/SPTREMBL:A0A087WXR9"
+                     /db_xref="UCSC:uc001rsu.3"
+                     /db_xref="EMBL:AC073610"
+                     /db_xref="GO:GO:0005102"
+                     /db_xref="GO:GO:0005576"
+                     /db_xref="GO:GO:0005578"
+                     /db_xref="GO:GO:0007275"
+                     /db_xref="GO:GO:0016055"
+                     /db_xref="HGNC_trans_name:WNT1-201"
+                     /db_xref="goslim_goa:GO:0003674"
+                     /db_xref="goslim_goa:GO:0005575"
+                     /db_xref="goslim_goa:GO:0005576"
+                     /db_xref="goslim_goa:GO:0005578"
+                     /db_xref="goslim_goa:GO:0007165"
+                     /db_xref="goslim_goa:GO:0008150"
+                     /db_xref="UniParc:UPI00015DFED2"
+                     /translation="MGLWALLPGWVSATLLLALAALPAALAANSSGRWWGIVNVASST
+                     NLLTDSKSLQLVLEPSLQLLSRKQRRLIRQNPGILHSVSGGLQSAVRECKWQFRNRRW
+                     NCPTAPGPHLFGKIVNRGCRETAFIFAITSAGVTHSVARSCSEGSIESCTCDYRRRGP
+                     GGPDWHWGGCSDNIDFGRLFGREFVDSGEKGRDLRFLMNLHNNEAGRTTVFSEMRQEC
+                     KCHGMSGSCTVRTCWMRLPTLRAVGDVLRDRFDGASRVLYGNRGSNRASRAELLRLEP
+                     DLVYFEKSPNFCTYSGRLGTAGTAGRACNSSSPALDGCELLCCGRGHRTRTQRVTERC
+                     NCTFHWCCHVSCRNCTHTRVLHECL"
+     exon            2700..3224
+                     /note="exon_id=ENSE00001114101"
+     exon            163..302
+                     /note="exon_id=ENSE00001187256"
+     exon            1..302
+                     /note="exon_id=ENSE00003744225"
+     exon            1016..1269
+                     /note="exon_id=ENSE00001163542"
+     exon            2936..3188
+                     /note="exon_id=ENSE00003725297"
+     exon            2700..2902
+                     /note="exon_id=ENSE00003722058"
+     exon            1972..2237
+                     /note="exon_id=ENSE00001187250"
+BASE COUNT         580 a       1069 c       1005 g        570 t          0 n
+ORIGIN
+        1 GCGGTGCCGC CCGCCGTGGC CGCCTCAGCC CACCAGCCGG GACCGCGAGC CATGCTGTCC
+       61 GCCGCCCGCC CCCAGGGTTG TTAAAGCCAG ACTGCGAACT CTCGCCACTG CCGCCACCGC
+      121 CGCGTCCCGT CCCACCGTCG CGGGCAACAA CCAAAGTCGC CGCAACTGCA GCACAGAGCG
+      181 GGCAAAGCCA GGCAGGCCAT GGGGCTCTGG GCGCTGTTGC CTGGCTGGGT TTCTGCTACG
+      241 CTGCTGCTGG CGCTGGCCGC TCTGCCCGCA GCCCTGGCTG CCAACAGCAG TGGCCGATGG
+      301 TGGTAAGTGA GCTGGTGCGG GGTCGCCACT TGTCCCGCGG CACAGAGCCA GGGGCCAACC
+      361 CTACCCAGCT CCCACGCTCT GGGATCCGTC TGCCGACAGG CTCCCTCCCC GCTCTGACTT
+      421 CCCTCCGCGA CACCGAAGGG CGATCTGGCA TGAAACTGCC CCAGACTCCA GCTCTGTACA
+      481 AGTGGGGCGA ATGATCCGCC CGCGGAGGCC TAAGATACCC CAGGCAGGGA GCCCACTCTC
+      541 ATCTAGCACC GCCCTTCCCC TTTGAGCGCC AACTCCAGCC TCACGGCGGT GGCTCACCAC
+      601 AGGTTTCCCC ACCTCGGGAA GTGAAGGGCC AGGAGTTCGC CTAGAAAGGA GGGGAGAAGA
+      661 GGGTGGGACT CCTAAGCATT TCACGCCTTG GGTGGGCAAG AACTGCAGGC CATGATTATC
+      721 TCGCTCAGGC TGACCGGAAG AGGCTCGGAG ATCCAAGGTA GACACTCGGT CTCCGGGTAC
+      781 CTCCTCTGTC CAGTCTCCGG ACCTAGGGCT CAGGCGAGCA GCCCTGGGAC TACTGGGCAC
+      841 ACACAAGTCT GGACGCCCAG TTCTTTCAAA TTAGTGAGCC TGGGAGAGCG GGTATTATTA
+      901 ATCTCCCGCC ATTCTCTCCA GCCACATACC CCCAGGAAGA GGACCGGGTG GCACAGTTTT
+      961 TATGGTTAGG GTGCGGATCC CCTTCCTGAG CCTGAGCTAT CATACGTCCC ACCAGGGGTA
+     1021 TTGTGAACGT AGCCTCCTCC ACGAACCTGC TTACAGACTC CAAGAGTCTG CAACTGGTAC
+     1081 TCGAGCCCAG TCTGCAGCTG TTGAGCCGCA AACAGCGGCG TCTGATACGC CAAAATCCGG
+     1141 GGATCCTGCA CAGCGTGAGT GGGGGGCTGC AGAGTGCCGT GCGCGAGTGC AAGTGGCAGT
+     1201 TCCGGAATCG CCGCTGGAAC TGTCCCACTG CTCCAGGGCC CCACCTCTTC GGCAAGATCG
+     1261 TCAACCGAGG TGGGTGCCCA GGAAGGCGAC GCTTCCGGGA GCAGGGGAAA CGCGGGGTCA
+     1321 CCCCCAGGGC ATGGGCGGGC GAGTTCAGAG AAGGTGTCCC AGGCGCCTGG AGGGTCACAC
+     1381 AATCAACCTT GCCAAGTGCC TCGTGCCCAG CGCCAGCTCG GGGCCAGACT TCTACCAGGC
+     1441 GTTTTCCAGC CGTGCACCCT GGAAACGAAG CTTAACTTTT CTGAGCTACT GCCCCAGATA
+     1501 AAGAAAGTTT CGGGTCGCGG ACGCCGGCTG ACCGCCGCTT TCCCCCAGCC TCTCTCAAAA
+     1561 GCGCCTGGGA AGCTGCTCTC TGCAGGCGTG TGTCTGGCCT CTCGCCCAGC AAGGCTTGCA
+     1621 CCGCCAAAAT GGGCCGAAAG TTTTGGGCTG CGAAGAAGTC TTGGGGATGT ATGGTTCTTC
+     1681 CGCTCCCCTC TCTTCGGTTT GTCTCTCTGG GGCTGCTCCA CTTCCGCTAT CGAGCCAAAA
+     1741 TGCGCCCTAG AATCTCCCAG TAAGGTGTGA TTACGCCCGT GGACGTGGCT GCGTGCCCAC
+     1801 GCACCTGCTT TCTCTACTAG CCCTAGAGAC CAGCTTTCCA GCACTGCCGG CCCTGGCTCT
+     1861 CAGGACTCAA AGTGCGGAGT CGGGGGTGGG ATTCCGGTCC CAAGCCCTTC ATGAGGGTGC
+     1921 TGGCCGCGCC CCGCGTACCC CCTCGCTGAT CCCCGCTCCC TTCTCCCACA GGCTGTCGAG
+     1981 AAACGGCGTT TATCTTCGCT ATCACCTCCG CCGGGGTCAC CCATTCGGTG GCGCGCTCCT
+     2041 GCTCAGAAGG TTCCATCGAA TCCTGCACGT GTGACTACCG GCGGCGCGGC CCCGGGGGCC
+     2101 CCGACTGGCA CTGGGGGGGC TGCAGCGACA ACATTGACTT CGGCCGCCTC TTCGGCCGGG
+     2161 AGTTCGTGGA CTCCGGGGAG AAGGGGCGGG ACCTGCGCTT CCTCATGAAC CTTCACAACA
+     2221 ACGAGGCAGG CCGTACGGTG AGCTTTGAGA GGCTCCGCAC CCTAAGCGGA GCGGCAGGGG
+     2281 CCAACCTCGG GCTGGGGAAG TGACGGTCGG TGAGATAAGG CAAGGGGCAC CAGGAGAGGG
+     2341 CGTCCTGGGA GAGCCGGAGG CTTGGAACGA AGACGGAGAA TAGAGGAGAC AGTGGCTGAG
+     2401 GGCAAAGGTA TGTCTGGCCC GCGGACAGGT AGAAGAGGTT GCAAATCAAG CACAGTCTCT
+     2461 TCGCTGTACA GATTCGAAAA ATAAGCCTGA GAGGCCGAGA CTGACTCGCC GCGGCGGAGC
+     2521 AGGGTTGGGC AGGGTTTCCA AATCTCAGCG GAACATTTCG CGCCTCCCTT CCCCTGGGCT
+     2581 CAGCTAGGCC TGGGCCTTTG CTGAGGTCCG GCCCCCGTGG CGTCCGGGAG AGGGCAGTGT
+     2641 CTGGGAGGGT GACTCTGGCC CGGTGCCCTG GGACACTCTT TCTTCCCCTA TCCCCGCAGA
+     2701 CCGTATTCTC CGAGATGCGC CAGGAGTGCA AGTGCCACGG GATGTCCGGC TCATGCACGG
+     2761 TGCGCACGTG CTGGATGCGG CTGCCCACGC TGCGCGCCGT GGGCGATGTG CTGCGCGACC
+     2821 GCTTCGACGG CGCCTCGCGC GTCCTGTACG GCAACCGCGG CAGCAACCGC GCTTCGCGGG
+     2881 CGGAGCTGCT GCGCCTGGAG CCGGAAGACC CGGCCCACAA ACCGCCCTCC CCCCACGACC
+     2941 TCGTCTACTT CGAGAAATCG CCCAACTTCT GCACGTACAG CGGACGCCTG GGCACAGCAG
+     3001 GCACGGCAGG GCGCGCCTGT AACAGCTCGT CGCCCGCGCT GGACGGCTGC GAGCTGCTCT
+     3061 GCTGCGGCAG GGGCCACCGC ACGCGCACGC AGCGCGTCAC CGAGCGCTGC AACTGCACCT
+     3121 TCCACTGGTG CTGCCACGTC AGCTGCCGCA ACTGCACGCA CACGCGCGTA CTGCACGAGT
+     3181 GTCTGTGAGG CGCTGCGCGG ACTCGCCCCC AGGAACGCTC TCCT
+//
+
+
+
+
